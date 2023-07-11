@@ -9,7 +9,7 @@ export const ProfileCard = ({ username, tag, location, avatar, stats }) => (
       <div className={style.card}>
         <div className={style.user}>
           <div className={style.img}>
-            <img src={avatar} />
+            <img src={avatar} alt="avatar"/>
           </div>
           <div className={style.name}>{username}</div>
           <p className="tag">{tag}</p>
