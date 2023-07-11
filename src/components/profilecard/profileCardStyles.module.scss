@@ -1,0 +1,187 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+html,
+body {
+  background: #fafaff;
+  color: #57535c;
+  font-size: 14pt;
+  font-weight: 400;
+  line-height: 21pt;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  perspective: 1050pt;
+}
+
+*{
+    margin: 0;
+}
+#toggle {
+  display: none;
+}
+label {
+  border: 2px solid currentcolor;
+  color: #d9d0e5;
+  display: block;
+  height: 21pt;
+  width: 42pt;
+  border-radius: 21pt;
+  margin: 0 auto;
+  padding: 1px;
+  transition: color 0.3s cubic-bezier(0.5, 0, 0, 1);
+  cursor: pointer;
+}
+label:before {
+  content: ' ';
+  display: block;
+  background: currentcolor;
+  height: 21pt;
+  width: 21pt;
+  border-radius: 21pt;
+  transition: transform 0.3s cubic-bezier(0.5, 0, 0, 1);
+}
+.cardcontainer {
+  text-align: center;
+  /* background-color: red; */
+  margin: 0 auto;
+  height: 310px;
+  width: 310px;
+  border-radius: 10.5pt;
+  box-shadow: 0 1rem 5rem -1rem rgba(0, 0, 100, 0.3);
+  transform-origin: 50% 0;
+  transform-style: preserve-3d;
+}
+.cardcontainer * {
+  transform-style: preserve-3d;
+}
+.cardcontainer .card {
+  background: linear-gradient(to bottom right, aquamarine, blue);
+  color: #fff;
+  height: 100%;
+  padding-top: 31.5pt;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10.5pt;
+  /* box-shadow: 0 1rem 5rem -1rem rgba(0, 0, 100, 0.2); */
+  transform-origin: 50% 0;
+}
+.cardcontainer .card .btn-grp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cardcontainer .card .btn-grp .insta-btn {
+  font-size: 17.5pt;
+  line-height: 42pt;
+  vertical-align: middle;
+  height: 42pt;
+  width: 42pt;
+}
+.cardcontainer .card .btn-grp .link-btn {
+  font-size: 17.5pt;
+  line-height: 42pt;
+  vertical-align: middle;
+  text-decoration: none;
+  /* height: 42pt; */
+  color: white;
+  width: 42pt;
+}
+.cardcontainer .card .user {
+  margin-bottom: 31.5pt;
+}
+.cardcontainer .card .user .img {
+  border: 3px solid #fff;
+  border-radius: 63pt;
+  height: 63pt;
+  width: 63pt;
+  margin: 0 auto;
+  margin-bottom: 5.25pt;
+  overflow: hidden;
+}
+.cardcontainer .card .user .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.cardcontainer .card .user .name {
+  font-size: 12pt;
+  display: inline-block;
+}
+.cardcontainer .card .followstats {
+  display: flex;
+  padding: 0 10.5pt;
+}
+.cardcontainer .card .followstats .stat {
+  display: block;
+  width: 30%;
+  flex-grow: 1;
+}
+.cardcontainer .card .followstats .stat .num {
+  font-size: 16.8pt;
+  line-height: 16.8pt;
+  margin-bottom: 2.625pt;
+  font-weight: 600;
+}
+.cardcontainer .card .followstats .stat .cap {
+  font-size: 10.5pt;
+  line-height: 10.5pt;
+  font-weight: 300;
+  opacity: .6;
+}
+.cardcontainer {
+  transition: transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.cardcontainer .card {
+  transition: transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.cardcontainer .card .user {
+  transition: text-shadow 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.cardcontainer .card .user .img {
+  transition-delay: .2s;
+  transition: transform 0.8s cubic-bezier(0.5, 0, 0, 1), box-shadow 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.cardcontainer .card .user .name {
+  transition: transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0.25s;
+}
+.cardcontainer .card .top-btns {
+  transition: transform 0.8s cubic-bezier(0.5, 0, 0, 1), text-shadow 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.cardcontainer .card .top-btns .btn {
+  transition: transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+#toggle:checked ~ .cardcontainer {
+  transform: translateY(42pt) rotateX(40deg);
+}
+#toggle:checked ~ .cardcontainer .card {
+  transform: translateZ(31.5pt) rotateX(5deg);
+}
+#toggle:checked ~ label {
+  color: aquamarine;
+}
+#toggle:checked ~ label:before {
+  transform: translateX(21pt);
+}
+#toggle:checked ~ .cardcontainer .card .btn-grp {
+  text-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+}
+#toggle:checked ~ .cardcontainer .card .btn-grp .insta-btn {
+  transform: translateZ(10pt);
+}
+#toggle:checked ~ .cardcontainer .card .btn-grp {
+  text-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+}
+#toggle:checked ~ .cardcontainer .card .btn-grp .link-btn {
+  transform: translateZ(10pt);
+}
+#toggle:checked ~ .cardcontainer .card .user .img {
+  box-shadow: 0 3em 2em rgba(0, 0, 0, 0.1);
+  transform: translateZ(42pt);
+}
+#toggle:checked ~ .cardcontainer .card .user .name {
+  transform: translateZ(21pt);
+}

@@ -1,0 +1,39 @@
+.statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .statlist{
+    display: flex;
+    padding: 0;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 100px;
+    background-color: #e0e0e0;
+    margin: 0 10px;
+  }
+  
+  .item:nth-child(1) {
+    background-color: #ff8080;
+  }
+  
+  .item:nth-child(2) {
+    background-color: #80b3ff;
+  }
+  
+  .item:nth-child(3) {
+    background-color: #80ffaa;
+  }
+  
+  .item:nth-child(4) {
+    background-color: #ffcc80;
+  }
