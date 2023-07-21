@@ -1,5 +1,5 @@
 import style from './transactionStyle.module.scss'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 export const TransactionHistory = ({ transactions }) => (
   <section>
